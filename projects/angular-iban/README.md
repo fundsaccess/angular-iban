@@ -1,6 +1,6 @@
 # Angular-iban
 
-Angular directives and pipes for IBAN
+Directives and pipes for Angular 
 
 ## Installation
 

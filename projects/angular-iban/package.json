@@ -1,10 +1,25 @@
 {
   "name": "angular-iban",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "Angular directives and pipes for IBAN",
+  "author": "fundsaccess AG",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fundsaccess/angular-iban"
+  },
+  "homepage": "https://github.com/fundsaccess",
+  "keywords": [
+    "angular",
+    "iban",
+    "directive",
+    "pipe",
+    "typescript"
+  ],
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"
   },
+  "license": "MIT",
   "dependencies": {
     "iban": "0.0.11"
   }
