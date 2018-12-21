@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-iban": [
+        "dist/angular-iban"
+      ],
+      "angular-iban/*": [
+        "dist/angular-iban/*"
+      ]
+    }
   }
 }

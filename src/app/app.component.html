@@ -5,17 +5,34 @@
   </h1>
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h2>IBAN Validator: </h2>
+
+<form name="form" novalidate>
+  <div class="form-group row">
+    <label for="iban" class="col-sm-2 col-form-label">Input your IBAN:</label>
+    <div class="col-sm-4">
+      <input id="iban" name="iban" class="form-control" #iban="ngModel" type="text" ibanValidator [(ngModel)]="testIban" [ngModelOptions]="{standalone: true}" placeholder="IBAN" required autocomplete="off">
+    </div>
+    <div *ngIf="iban.invalid && (iban.dirty || iban.touched)"
+         class="alert alert-danger">
+
+      <div *ngIf="iban.errors.required">
+        IBAN is required.
+      </div>
+      <div *ngIf="iban.errors.iban">
+        IBAN is invalid
+      </div>
+
+    </div>
+    <div *ngIf="iban.valid && (iban.dirty || iban.touched)"
+         class="alert alert-danger">
+        IBAN is valid.
+    </div>
+  </div>
+</form>
+
+<h2>IBAN Formatter: </h2>
+
+<p>{{testIban | ibanFormatter}}</p>
 
 <router-outlet></router-outlet>

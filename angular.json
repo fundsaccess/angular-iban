@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-iban": {
+    "angular-iban-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -106,7 +106,7 @@
         }
       }
     },
-    "angular-iban-e2e": {
+    "angular-iban-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -127,6 +127,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "angular-iban": {
+      "root": "projects/angular-iban",
+      "sourceRoot": "projects/angular-iban/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-iban/tsconfig.lib.json",
+            "project": "projects/angular-iban/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-iban/src/test.ts",
+            "tsConfig": "projects/angular-iban/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-iban/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-iban/tsconfig.lib.json",
+              "projects/angular-iban/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
