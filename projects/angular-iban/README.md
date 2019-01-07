@@ -6,12 +6,12 @@ Directives and pipes for Angular
 
 npm:
 ```shell
-npm install --save angular-iban iban
+npm install --save angular-iban
 ```
 
 yarn:
 ```shell
-yarn add angular-iban iban
+yarn add angular-iban
 ```
 
 ## Import
