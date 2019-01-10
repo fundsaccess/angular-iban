@@ -111,7 +111,14 @@ export class AppComponent implements OnInit {
 
 ### IBAN Formatter
 ```html
+before
+<p>DE12500105170648489890</p>
+
+set pipe
 <p>{{ibanGermany | ibanFormatter}}</p>
+
+after
+<p>DE12 5001 0517 0648 4898 90</p>
 ```
 
 ## Demo
