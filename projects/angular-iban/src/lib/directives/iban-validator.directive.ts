@@ -1,6 +1,6 @@
 import { Directive } from '@angular/core';
-import {NG_VALIDATORS, Validator, AbstractControl, ValidationErrors} from '@angular/forms';
-import * as IBAN from 'iban';
+import {NG_VALIDATORS, Validator, AbstractControl} from '@angular/forms';
+import {ValidatorService} from '../services/validator.service';
 
 @Directive({
   selector: '[ibanValidator]',
@@ -8,15 +8,6 @@ import * as IBAN from 'iban';
 })
 export class IbanValidatorDirective implements Validator {
   validate(c: AbstractControl): { [key: string]: any; } {
-    return IbanValidatorDirective.validateIban(c);
-  }
-
-  static validateIban(c: AbstractControl): ValidationErrors {
-    if (c.value && !IBAN.isValid(c.value)) {
-      return {'iban': {value: c.value}}
-    }
-
-    return null;
+    return ValidatorService.validateIban(c);
   }
 }
-
