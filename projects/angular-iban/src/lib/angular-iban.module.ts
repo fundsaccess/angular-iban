@@ -7,13 +7,12 @@ import { IbanFormatterPipe } from './pipes/iban-formatter.pipe';
   declarations: [
     IbanValidatorDirective,
     IbanFormatterPipe
-
   ],
   imports: [
   ],
   exports: [
     IbanValidatorDirective,
-    IbanFormatterPipe
+    IbanFormatterPipe,
   ]
 })
 export class AngularIbanModule { }

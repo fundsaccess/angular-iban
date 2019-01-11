@@ -1,10 +1,6 @@
-import { Injectable } from '@angular/core';
 import {AbstractControl, ValidationErrors} from '@angular/forms';
 import * as IBAN from 'iban';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class ValidatorService {
 
   constructor() { }

@@ -84,7 +84,7 @@ export class Module {
 ```typescript
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {IbanValidatorDirective} from 'angular-iban/src/lib/directives/iban-validator.directive';
+import {ValidatorService} from 'angular-iban';
 
 export class AppComponent implements OnInit {
 
@@ -98,8 +98,10 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     this.ibanReactive = new FormControl(
       null,
-        [Validators.required,
-          IbanValidatorDirective.validateIban]
+        [
+          Validators.required,
+          ValidatorService.validateIban
+        ]
     );
 
     this.reactiveForm = this.fb.group({
