@@ -1,13 +1,13 @@
 {
   "name": "angular-iban",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Angular directives and pipes for IBAN",
   "author": "fundsaccess AG",
   "repository": {
     "type": "git",
     "url": "https://github.com/fundsaccess/angular-iban"
   },
-  "homepage": "https://github.com/fundsaccess",
+  "homepage": "https://github.com/fundsaccess/angular-iban#readme",
   "keywords": [
     "angular",
     "iban",
