@@ -19,7 +19,7 @@ import {APP_BASE_HREF} from '@angular/common';
     AngularIbanModule
   ],
   providers: [
-    {provide: APP_BASE_HREF, useValue: '/'}
+    {provide: APP_BASE_HREF, useValue: '/angular-iban'}
   ],
   bootstrap: [AppComponent]
 })
