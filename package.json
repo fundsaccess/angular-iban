@@ -1,10 +1,12 @@
 {
   "name": "angular-iban",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:angular-iban-app": "ng build angular-iban-app --prod",
+    "build:angular-iban": "ng build angular-iban",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

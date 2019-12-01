@@ -33,6 +33,7 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "docs",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

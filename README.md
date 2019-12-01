@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="256px" width="256px" style="text-align: center;" src="https://github.com/fundsaccess/angular-iban/src/assets/angular.svg">
+</p>
+
 # Angular-iban
 
 Angular directives and pipes for IBAN

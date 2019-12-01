@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {ValidatorService} from 'angular-iban';
+import {ValidatorService} from '../../projects/angular-iban/src/public_api';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
   public ibanReactive: FormControl;
 
   public ibanGermany = 'DE12500105170648489890';
+
+  public testIban: string;
 
   constructor(private fb: FormBuilder,
   ) {}
