@@ -1,6 +1,6 @@
 {
   "name": "angular-iban",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Angular directives and pipes for IBAN",
   "author": "fundsaccess AG",
   "repository": {

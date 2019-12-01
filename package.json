@@ -1,17 +1,17 @@
 {
   "name": "angular-iban",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:angular-iban-app": "ng build angular-iban-app --prod",
+    "build:angular-iban-app": "ng build angular-iban-app --prod --base-href https://fundsaccess.github.io/angular-iban/",
     "build:angular-iban": "ng build angular-iban",
+    "publish:angular-iban": "npm publish dist/angular-iban/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",

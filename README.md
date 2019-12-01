@@ -1,10 +1,12 @@
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;" src="https://github.com/fundsaccess/angular-iban/src/assets/angular.svg">
+  <img height="256px" width="256px" style="text-align: center;" src="https://fundsaccess.github.io/angular-iban/assets/angular.svg">
 </p>
 
 # Angular-iban
 
 Angular directives and pipes for IBAN
+
+Demo: https://fundsaccess.github.io/angular-iban/
 
 ## Installation
 
@@ -38,7 +40,7 @@ export class Module {
 ```html
 <form name="templateDrivenForm" novalidate>
     <div class="form-group row">
-      <label for="iban" class="col-sm-2 col-form-label">Input your IBAN:</label>
+      <label for="iban" class="col-sm-2 col-form-label">IBAN:</label>
       <input id="iban" name="iban" class="form-control" #iban="ngModel" type="text" ibanValidator [(ngModel)]="testIban" [ngModelOptions]="{standalone: true}" required autocomplete="off">
       <div *ngIf="iban.invalid && (iban.dirty || iban.touched)"
            class="alert alert-danger">
@@ -63,7 +65,7 @@ export class Module {
 ```html
 <form [formGroup]="reactiveForm" autocomplete="off" novalidate>
     <div class="form-group row">
-      <label for="ibanReactive" class="col-sm-2 col-form-label">Input your IBAN:</label>
+      <label for="ibanReactive" class="col-sm-2 col-form-label">IBAN:</label>
       <input type="text" class="form-control" id="ibanReactive" name="ibanReactive" formControlName="ibanReactive" required>
     </div>
 
@@ -128,8 +130,12 @@ after
 ```
 
 ## Demo
+ 
+https://fundsaccess.github.io/angular-iban/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+or
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## License
 
