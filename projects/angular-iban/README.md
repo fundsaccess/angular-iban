@@ -25,6 +25,7 @@ yarn add angular-iban iban
 Once installed you need to import the main module:
 ```typescript
 import { AngularIbanModule } from 'angular-iban';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [],
@@ -37,6 +38,26 @@ export class Module {
 ## Usage
 
 ### IBAN Validator with template driven form
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { AngularIbanModule } from 'angular-iban';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+
+@NgModule({
+  declarations: [],
+ imports: [
+     BrowserModule,
+     AngularIbanModule,
+     FormsModule
+   ],
+})
+export class Module {
+}
+```
+
+
 ```html
 <form name="templateDrivenForm" novalidate>
     <div class="form-group row">
@@ -62,6 +83,24 @@ export class Module {
 ```
 
 ### IBAN Validator with reactive form
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AngularIbanModule } from 'angular-iban';
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [],
+ imports: [
+     BrowserModule,
+     AngularIbanModule,
+     ReactiveFormsModule,
+   ],
+})
+export class Module {
+}
+```
+
 ```html
 <form [formGroup]="reactiveForm" autocomplete="off" novalidate>
     <div class="form-group row">
