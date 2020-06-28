@@ -20,6 +20,14 @@ yarn:
 yarn add angular-iban iban
 ```
 
+## Version compatibility
+| angular-iban | Angular |
+|:------------:|:-------:|
+|     0.2.0    |   7.x   |
+|      1.x     |   8.x   |
+|      2.x     |   9.x   |
+
+
 ## Import
 
 Once installed you need to import the main module:
