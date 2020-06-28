@@ -16,8 +16,8 @@
     "typescript"
   ],
   "peerDependencies": {
-    "@angular/common": "~8.2.14",
-    "@angular/core": "~8.2.14",
+    "@angular/common": "~9.1.11",
+    "@angular/core": "~9.1.11",
     "iban": "0.0.14"
   },
   "license": "MIT"
