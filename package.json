@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "core-js": "^2.5.4",
+    "iban": "0.0.14",
     "rxjs": "~6.5.5",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

@@ -18,7 +18,7 @@
   "peerDependencies": {
     "@angular/common": "~8.2.14",
     "@angular/core": "~8.2.14",
-    "iban": "0.0.12"
+    "iban": "0.0.14"
   },
   "license": "MIT"
 }
