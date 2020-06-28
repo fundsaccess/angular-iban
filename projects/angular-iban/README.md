@@ -6,11 +6,12 @@
 
 Angular directives and pipes for IBAN
 
-This library supports Angular 7+. Please check the Version compatibility below to choose the correct version to install.
-
 Demo: https://fundsaccess.github.io/angular-iban/
 
 ## Version compatibility
+
+This library supports Angular 7+. Please check the Version compatibility below to choose the correct version to install.
+
 | angular-iban | Angular |
 |:------------:|:-------:|
 |     0.2.0    |   7.x   |
