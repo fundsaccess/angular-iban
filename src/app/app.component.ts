@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {ValidatorService} from '../../projects/angular-iban/src/public_api';
+import {ValidatorService} from '../../projects/angular-iban/src/public-api';
 
 @Component({
   selector: 'app-root',
