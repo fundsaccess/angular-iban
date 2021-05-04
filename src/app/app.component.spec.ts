@@ -1,15 +1,20 @@
-import { TestBed, async, waitForAsync } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IbanFormatterPipe } from '../../projects/angular-iban/src/lib/pipes/iban-formatter.pipe';
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        ReactiveFormsModule,
+        FormsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        IbanFormatterPipe
       ],
     }).compileComponents();
   }));
