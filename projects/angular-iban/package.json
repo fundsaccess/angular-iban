@@ -1,6 +1,6 @@
 {
   "name": "angular-iban",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Angular directives and pipes for IBAN",
   "author": "fundsaccess AG",
   "repository": {
@@ -16,12 +16,12 @@
     "typescript"
   ],
   "peerDependencies": {
-    "@angular/common": "^12.x",
-    "@angular/core": "^12.x",
+    "@angular/common": "^13.x",
+    "@angular/core": "^13.x",
     "iban": "0.0.14"
   },
   "license": "MIT",
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   }
 }

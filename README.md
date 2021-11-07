@@ -20,6 +20,7 @@ This library supports Angular 7+. Please check the Version compatibility below t
 |      3.x     |  10.x   |
 |      4.x     |  11.x   |
 |      5.x     |  12.x   |
+|      6.x     |  13.x   |
 
 ## Installation
 
@@ -83,10 +84,10 @@ export class Module {
       <div *ngIf="iban.invalid && (iban.dirty || iban.touched)"
            class="alert alert-danger">
 
-        <div *ngIf="iban.errors.required">
+        <div *ngIf="iban.errors.['required']">
           IBAN is required.
         </div>
-        <div *ngIf="iban.errors.iban">
+        <div *ngIf="iban.errors.['iban']">
           IBAN is invalid
         </div>
 
@@ -128,10 +129,10 @@ export class Module {
     <div *ngIf="ibanReactive.invalid && (ibanReactive.dirty || ibanReactive.touched)"
          class="alert alert-danger">
 
-      <div *ngIf="ibanReactive.errors.required">
+      <div *ngIf="ibanReactive.errors.['required']">
         IBAN is required.
       </div>
-      <div *ngIf="ibanReactive.errors.iban">
+      <div *ngIf="ibanReactive.errors.['iban']">
         IBAN is invalid
       </div>
 
@@ -195,6 +196,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## License
 
-Copyright (c) 2018 fundsaccess AG. Licensed under the MIT License (MIT)
+Copyright (c) 2018 - 2021 fundsaccess AG. Licensed under the MIT License (MIT)
 
 
