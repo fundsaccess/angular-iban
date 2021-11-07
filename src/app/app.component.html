@@ -330,10 +330,10 @@
         <div *ngIf="iban.invalid && (iban.dirty || iban.touched)"
              class="alert alert-danger">
 
-          <div *ngIf="iban.errors.required">
+          <div *ngIf="iban.errors?.required">
             IBAN is required.
           </div>
-          <div *ngIf="iban.errors.iban">
+          <div *ngIf="iban.errors?.iban">
             IBAN is invalid
           </div>
 
@@ -358,10 +358,10 @@
       <div *ngIf="ibanReactive.invalid && (ibanReactive.dirty || ibanReactive.touched)"
            class="alert alert-danger">
 
-        <div *ngIf="ibanReactive.errors.required">
+        <div *ngIf="ibanReactive.errors?.required">
           IBAN is required.
         </div>
-        <div *ngIf="ibanReactive.errors.iban">
+        <div *ngIf="ibanReactive.errors?.iban">
           IBAN is invalid
         </div>
 

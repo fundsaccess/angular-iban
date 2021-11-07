@@ -8,6 +8,6 @@ export class ValidatorService {
       return {iban: {value: c.value}};
     }
 
-    return null;
+    return null as any;
   }
 }

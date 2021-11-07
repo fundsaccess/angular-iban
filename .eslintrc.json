@@ -16,26 +16,59 @@
         "createDefaultProgram": true
       },
       "extends": [
+        "eslint:recommended",
+        "airbnb-base",
+        "airbnb-typescript/base",
         "plugin:@angular-eslint/ng-cli-compat",
         "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:rxjs/recommended"
+      ],
+      "plugins": [
+        "rxjs-angular"
       ],
       "rules": {
-        "@typescript-eslint/consistent-type-definitions": "error",
-        "@typescript-eslint/dot-notation": "off",
-        "@typescript-eslint/explicit-member-accessibility": [
-          "off",
+        "@angular-eslint/component-class-suffix": [
+          "error",
           {
-            "accessibility": "explicit"
+            "suffixes": [
+              "Page",
+              "Component"
+            ]
           }
         ],
-        "brace-style": [
+        "@angular-eslint/component-selector": [
           "error",
-          "1tbs"
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
         ],
-        "id-blacklist": "off",
-        "id-match": "off",
-        "no-underscore-dangle": "off"
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "import/prefer-default-export": "off",
+        "rxjs-angular/prefer-async-pipe": "off",
+        "rxjs-angular/prefer-composition": "off",
+        "rxjs-angular/prefer-takeuntil": "error",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "ignoreRestSiblings":  true,
+            "varsIgnorePattern": "[iI]gnored",
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "ngrx/prefer-effect-callback-in-block-statement": "off",
+        "@typescript-eslint/explicit-function-return-type":"error"
       }
     },
     {
@@ -45,7 +78,17 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {}
+      "rules": {
+        "@angular-eslint/template/conditional-complexity": "error",
+        "@angular-eslint/template/no-call-expression": "error",
+        "@angular-eslint/template/use-track-by-function": "error",
+        "@angular-eslint/template/cyclomatic-complexity": [
+          "error",
+          {
+            "maxComplexity": 25
+          }
+        ]
+      }
     }
   ]
 }
