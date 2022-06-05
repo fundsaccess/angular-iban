@@ -38,5 +38,4 @@ describe('ValidatorService', () => {
   it('DE0210010010000682010X should be invalid', () => {
     expect(ValidatorService.validateIban(new FormControl('DE0210010010000682010X'))).toBeTruthy();
   });
-  
 });

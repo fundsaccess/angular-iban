@@ -1,6 +1,6 @@
 import { Directive } from '@angular/core';
-import {NG_VALIDATORS, Validator, AbstractControl} from '@angular/forms';
-import {ValidatorService} from '../services/validator.service';
+import { NG_VALIDATORS, Validator, AbstractControl } from '@angular/forms';
+import { ValidatorService } from '../services/validator.service';
 
 @Directive({
   selector: '[ibanValidator]',

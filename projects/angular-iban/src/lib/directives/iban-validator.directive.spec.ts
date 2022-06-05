@@ -1,5 +1,4 @@
 import { IbanValidatorDirective } from './iban-validator.directive';
-import { ValidatorService } from '../services/validator.service';
 import { FormControl } from '@angular/forms';
 
 describe('IbanValidatorDirective', () => {
@@ -28,5 +27,4 @@ describe('IbanValidatorDirective', () => {
   it('DE0210010010000682010X should be invalid', () => {
     expect(ibanValidatorDirective.validate(new FormControl('DE0210010010000682010X'))).toBeTruthy();
   });
-
 });
