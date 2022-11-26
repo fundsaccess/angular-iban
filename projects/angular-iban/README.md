@@ -22,6 +22,7 @@ This library supports Angular 7+. Please check the Version compatibility below t
 |     5.x      |  12.x   |
 |     6.x      |  13.x   |
 |     14.x     |  14.x   |
+|     15.x     |  15.x   |
 
 ## Installation
 
@@ -197,6 +198,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## License
 
-Copyright (c) 2018 - 2021 fundsaccess AG. Licensed under the MIT License (MIT)
+Copyright (c) 2018 - 2022 fundsaccess AG. Licensed under the MIT License (MIT)
 
 
