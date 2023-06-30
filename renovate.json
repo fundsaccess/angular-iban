@@ -23,7 +23,7 @@
       "matchManagers":[
         "npm"
       ]
-    },
+    }
   ],
   "separateMajorMinor":false,
   "dryRun":false,
