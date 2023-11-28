@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { ValidatorService } from './validator.service';
 import { FormControl } from '@angular/forms';
+import { ValidatorService } from './validator.service';
 
 describe('ValidatorService', () => {
   let validatorService: ValidatorService;
@@ -8,8 +8,8 @@ describe('ValidatorService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        ValidatorService
-      ]
+        ValidatorService,
+      ],
     });
 
     validatorService = TestBed.inject(ValidatorService);

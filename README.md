@@ -24,6 +24,7 @@ This library supports Angular 7+. Please check the Version compatibility below t
 |     14.x     |  14.x   |
 |     15.x     |  15.x   |
 |     16.x     |  16.x   |
+|     17.x     |  17.x   |
 
 ## Installation
 
@@ -58,6 +59,73 @@ export class Module {
 ### Some sample accounts
 https://www.iban-bic.com/sample_accounts.html
 
+### IBAN Validator with reactive form
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AngularIbanModule } from 'angular-iban';
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [],
+ imports: [
+     BrowserModule,
+     AngularIbanModule,
+     ReactiveFormsModule,
+   ],
+})
+export class Module {
+}
+```
+
+```html
+<form [formGroup]="reactiveForm" autocomplete="off" novalidate>
+  <div class="form-group row">
+    <label for="ibanReactive" class="col-sm-2 col-form-label">IBAN: </label>
+    <input type="text" class="form-control" id="ibanReactive" name="ibanReactive" formControlName="ibanReactive" required>
+  </div>
+
+  <div *ngIf="reactiveForm.get('ibanReactive')?.invalid && (reactiveForm.get('ibanReactive')?.dirty || reactiveForm.get('ibanReactive')?.touched)"
+       class="alert alert-danger">
+
+    <div *ngIf="reactiveForm.get('ibanReactive')?.errors?.['required']">
+      IBAN is required.
+    </div>
+    <div *ngIf="reactiveForm.get('ibanReactive')?.errors?.['iban']">
+      IBAN is invalid
+    </div>
+
+  </div>
+  <div *ngIf="reactiveForm.get('ibanReactive')?.valid && (reactiveForm.get('ibanReactive')?.dirty || reactiveForm.get('ibanReactive')?.touched)"
+       class="alert alert-danger">
+    IBAN is valid.
+  </div>
+</form>
+```
+
+```typescript
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ValidatorService } from 'angular-iban';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+})
+
+export class AppComponent {
+  public reactiveForm = new FormGroup({
+    ibanReactive: new FormControl(
+      null,
+      [
+        Validators.required,
+        ValidatorService.validateIban,
+      ],
+    ),
+  });
+}
+```
+
 ### IBAN Validator with template driven form
 
 ```typescript
@@ -77,7 +145,6 @@ import { NgModule } from '@angular/core';
 export class Module {
 }
 ```
-
 
 ```html
 <form name="templateDrivenForm" novalidate>
@@ -101,80 +168,6 @@ export class Module {
       </div>
     </div>
   </form>
-```
-
-### IBAN Validator with reactive form
-```typescript
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AngularIbanModule } from 'angular-iban';
-import { ReactiveFormsModule } from '@angular/forms';
-
-@NgModule({
-  declarations: [],
- imports: [
-     BrowserModule,
-     AngularIbanModule,
-     ReactiveFormsModule,
-   ],
-})
-export class Module {
-}
-```
-
-```html
-<form [formGroup]="reactiveForm" autocomplete="off" novalidate>
-    <div class="form-group row">
-      <label for="ibanReactive" class="col-sm-2 col-form-label">IBAN:</label>
-      <input type="text" class="form-control" id="ibanReactive" name="ibanReactive" formControlName="ibanReactive" required>
-    </div>
-
-    <div *ngIf="ibanReactive.invalid && (ibanReactive.dirty || ibanReactive.touched)"
-         class="alert alert-danger">
-
-      <div *ngIf="ibanReactive.errors.['required']">
-        IBAN is required.
-      </div>
-      <div *ngIf="ibanReactive.errors.['iban']">
-        IBAN is invalid
-      </div>
-
-    </div>
-    <div *ngIf="ibanReactive.valid && (ibanReactive.dirty || ibanReactive.touched)"
-         class="alert alert-danger">
-      IBAN is valid.
-    </div>
-  </form>
-```
-
-```typescript
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {ValidatorService} from 'angular-iban';
-
-export class AppComponent implements OnInit {
-
-  public reactiveForm: FormGroup;
-
-  public ibanReactive: FormControl;
-
-  constructor(private fb: FormBuilder
-  ) {}
-
-  public ngOnInit(): void {
-    this.ibanReactive = new FormControl(
-      null,
-        [
-          Validators.required,
-          ValidatorService.validateIban
-        ]
-    );
-
-    this.reactiveForm = this.fb.group({
-      ibanReactive: this.ibanReactive,
-    });
-  }
-}
 ```
 
 ### IBAN Formatter

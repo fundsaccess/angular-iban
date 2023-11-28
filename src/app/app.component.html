@@ -355,18 +355,18 @@
         <input type="text" class="form-control" id="ibanReactive" name="ibanReactive" formControlName="ibanReactive" required>
       </div>
 
-      <div *ngIf="ibanReactive.invalid && (ibanReactive.dirty || ibanReactive.touched)"
+      <div *ngIf="reactiveForm.get('ibanReactive')?.invalid && (reactiveForm.get('ibanReactive')?.dirty || reactiveForm.get('ibanReactive')?.touched)"
            class="alert alert-danger">
 
-        <div *ngIf="ibanReactive.errors?.['required']">
+        <div *ngIf="reactiveForm.get('ibanReactive')?.errors?.['required']">
           IBAN is required.
         </div>
-        <div *ngIf="ibanReactive.errors?.['iban']">
+        <div *ngIf="reactiveForm.get('ibanReactive')?.errors?.['iban']">
           IBAN is invalid
         </div>
 
       </div>
-      <div *ngIf="ibanReactive.valid && (ibanReactive.dirty || ibanReactive.touched)"
+      <div *ngIf="reactiveForm.get('ibanReactive')?.valid && (reactiveForm.get('ibanReactive')?.dirty || reactiveForm.get('ibanReactive')?.touched)"
            class="alert alert-danger">
         IBAN is valid.
       </div>

@@ -1,5 +1,5 @@
-import { IbanValidatorDirective } from './iban-validator.directive';
 import { FormControl } from '@angular/forms';
+import { IbanValidatorDirective } from './iban-validator.directive';
 
 describe('IbanValidatorDirective', () => {
   const ibanValidatorDirective = new IbanValidatorDirective();

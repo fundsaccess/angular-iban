@@ -5,13 +5,13 @@ import { IbanFormatterPipe } from './pipes/iban-formatter.pipe';
 @NgModule({
   declarations: [
     IbanValidatorDirective,
-    IbanFormatterPipe
+    IbanFormatterPipe,
   ],
   imports: [
   ],
   exports: [
     IbanValidatorDirective,
     IbanFormatterPipe,
-  ]
+  ],
 })
 export class AngularIbanModule { }

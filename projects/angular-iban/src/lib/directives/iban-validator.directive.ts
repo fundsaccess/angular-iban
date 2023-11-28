@@ -4,7 +4,7 @@ import { ValidatorService } from '../services/validator.service';
 
 @Directive({
   selector: '[ibanValidator]',
-  providers: [{provide: NG_VALIDATORS, useExisting: IbanValidatorDirective, multi: true}]
+  providers: [{ provide: NG_VALIDATORS, useExisting: IbanValidatorDirective, multi: true }],
 })
 export class IbanValidatorDirective implements Validator {
   validate(c: AbstractControl): { [key: string]: any } {

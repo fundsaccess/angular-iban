@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-iban-app:build"
+            "buildTarget": "angular-iban-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-iban-app:build:production"
+              "buildTarget": "angular-iban-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-iban-app:build"
+            "buildTarget": "angular-iban-app:build"
           }
         },
         "test": {
