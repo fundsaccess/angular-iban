@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import * as IBAN from 'iban';
 
 @Pipe({
-  name: 'ibanFormatter',
+    name: 'ibanFormatter',
+    standalone: false
 })
 export class IbanFormatterPipe implements PipeTransform {
   transform(value: any, args?: any): any {
