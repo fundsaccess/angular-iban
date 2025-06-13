@@ -27,6 +27,7 @@ This library supports Angular 7+. Please check the Version compatibility below t
 |     17.x     |  17.x   |
 |     18.x     |  18.x   |
 |     19.x     |  19.x   |
+|     20.x     |  20.x   |
 
 ## Installation
 

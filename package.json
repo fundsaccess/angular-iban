@@ -13,28 +13,28 @@
     "lint": "ng lint"
   },
   "dependencies": {
-    "@angular/animations": "19.0.1",
-    "@angular/common": "19.0.1",
-    "@angular/compiler": "19.0.1",
-    "@angular/core": "19.0.1",
-    "@angular/forms": "19.0.1",
-    "@angular/platform-browser": "19.0.1",
-    "@angular/platform-browser-dynamic": "19.0.1",
-    "@angular/router": "19.0.1",
+    "@angular/animations": "20.0.3",
+    "@angular/common": "20.0.3",
+    "@angular/compiler": "20.0.3",
+    "@angular/core": "20.0.3",
+    "@angular/forms": "20.0.3",
+    "@angular/platform-browser": "20.0.3",
+    "@angular/platform-browser-dynamic": "20.0.3",
+    "@angular/router": "20.0.3",
     "iban": "0.0.14",
     "rxjs": "7.8.1",
     "tslib": "2.6.1",
     "zone.js": "0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "19.0.2",
+    "@angular-devkit/build-angular": "20.0.2",
     "@angular-eslint/builder": "18.0.1",
     "@angular-eslint/eslint-plugin": "18.0.1",
     "@angular-eslint/eslint-plugin-template": "18.0.1",
     "@angular-eslint/schematics": "18.0.1",
     "@angular-eslint/template-parser": "18.0.1",
-    "@angular/cli": "19.0.2",
-    "@angular/compiler-cli": "19.0.1",
+    "@angular/cli": "20.0.2",
+    "@angular/compiler-cli": "20.0.3",
     "@types/iban": "0.0.32",
     "@types/jasmine": "3.10.0",
     "@types/node": "18.16.16",
@@ -50,8 +50,8 @@
     "karma-coverage": "2.2.1",
     "karma-jasmine": "4.0.2",
     "karma-jasmine-html-reporter": "1.7.0",
-    "ng-packagr": "19.0.1",
-    "typescript": "5.6.3"
+    "ng-packagr": "20.0.0",
+    "typescript": "5.8.3"
   },
   "engines": {
     "node": ">=18.13"
